@@ -7,7 +7,7 @@
 
 body {
 	background: #73d6df;
-	transition: 0.6s linear;
+	transition: 0.4s linear;
 }
 
 .product-card {
@@ -37,6 +37,7 @@ body {
 	height: 200px;
 	background-size: cover;
 	background-position: center;
+	transition: 0.5s linear;
 }
 
 .product-colors {
