@@ -1,0 +1,45 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+/* 방법 1 */
+
+.text-prompter > span:last-child {
+    opacity: 1;
+    animation: blink 1s infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 방법 2 */
+#text {
+	color:red;
+	font-size:30px;
+	margin-top:40px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
