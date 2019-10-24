@@ -1,0 +1,33 @@
+/*전체 영역을 통틀어서 스타일 정의*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+font-family: 'Nanum Gothic';
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #bbbbbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*네비게이션 영역*/
+
+.navbar {
+	background-color: #000000;
+	/* 배경 색상 */
+	border-color: #000000;
+}
+
+.navbar .navbar-brand {
+	/* 네비게이션 제목 색상 */
+	color: rebeccapurple;
+}
+
+.navbar div > ul > li > a {
+	color: rebeccapurple;
+}
