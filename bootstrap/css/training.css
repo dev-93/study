@@ -1,7 +1,8 @@
 /*메인컬러 #6f5499*/
 body {
-	background-color: #6f5499	;
+	background-color: #6f5499;
 }
+
 nav {
 	width: 1200px;
 	margin: 0 auto;
@@ -39,7 +40,7 @@ nav {
 	color: #6f5499;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
 	color: mediumpurple;
 }
 
