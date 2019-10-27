@@ -1,0 +1,472 @@
+body {
+	background-color: darkslategray;
+}
+
+.wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.wrap > div {
+	float: left;
+}
+
+.wrap > div {
+	margin-right: 100px;
+}
+
+/* static btn */
+
+.static .btn {
+	position: relative;
+	display: block;
+	font-size: 20px;
+	margin: 20px 0;
+	padding: 20px 40px;
+	border: none;
+	border: 2px solid #ff7675;
+	text-decoration: uppercase;
+	color: white;
+	background: none;
+	cursor: pointer;
+	overflow: hidden;
+	transition: 1s all ease;
+}
+
+.static .btn::before {
+	background: #ff7675;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	transition: all 0.6s ease;
+}
+
+/* horizontal */
+
+.static .btn_1::before {
+	width: 0;
+	height: 100%;
+}
+
+.static .btn_1:hover::before {
+	width: 100%;
+}
+
+/* vertical */
+
+.static .btn_2::before {
+	width: 100%;
+	height: 0;
+}
+
+.static .btn_2:hover::before {
+	height: 100%;
+}
+
+/* left diagonal */
+
+.static .btn_3::before {
+	width: 100%;
+	height: 0;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.static .btn_3:hover::before {
+	height: 400%;
+}
+
+/* right diagonal */
+
+.static .btn_4::before {
+	width: 100%;
+	height: 0;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.static .btn_4:hover::before {
+	height: 400%;
+}
+
+/* dynamic btn */
+
+.dynamic .btn {
+	z-index: 1;
+	margin: 20px 0;
+	display: block;
+	position: relative;
+	font-size: 20px;
+	font-family: inherit;
+	color: white;
+	padding: 0.5em 1em;
+	outline: none;
+	border: none;
+	background-color: hsl(236, 32%, 26%);
+	overflow: hidden;
+	transition: color 0.4s ease-in-out;
+}
+
+.dynamic .btn:hover {
+	cursor: pointer;
+}
+
+.dynamic .btn::before {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 100%;
+	right: 100%;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background-color: #3cefff;
+	transform-origin: center;
+	transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+	transition: transform 0.45s ease-in-out;
+}
+
+/* Bubble */
+
+.dynamic .btn_5:hover {
+	color: #161616;
+}
+
+.dynamic .btn_5:hover::before {
+	transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+
+/* Jelly */
+
+.dynamic .btn_6:hover {
+	animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+
+	0%,
+	100% {
+		transform: scale(1, 1);
+	}
+
+	25% {
+		transform: scale(0.9, 1.1);
+	}
+
+	50% {
+		transform: scale(1.1, 0.9);
+	}
+
+	75% {
+		transform: scale(0.95, 1.05);
+	}
+}
+
+/* Pulse */
+
+.dynamic .btn_7 {
+	z-index: 1;
+	position: relative;
+	font-size: 20px;
+	color: white;
+	padding: 0.5em 1em;
+	outline: none;
+	border: none;
+	background-color: hsl(236, 32%, 26%);
+}
+
+.dynamic .btn_7:hover {
+	cursor: pointer;
+}
+
+.dynamic .btn_7::before {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 4px solid hsl(236, 32%, 26%);
+	transform-origin: center;
+	transform: scale(1);
+}
+
+.dynamic .btn_7:hover::before {
+	transition: all 0.75s ease-in-out;
+	transform-origin: center;
+	transform: scale(1.75);
+	opacity: 0;
+}
+
+/* shine */
+
+.dynamic .btn_8::after {
+	content: '';
+	z-index: -1;
+	background-color: hsla(0, 0%, 100%, 0.2);
+	position: absolute;
+	top: -50%;
+	bottom: -50%;
+	width: 1.25em;
+	transform: translate3d(-525%, 0, 0) rotate(35deg);
+}
+
+.dynamic .btn_8:hover::after {
+	transition: transform 0.45s ease-in-out;
+	transform: translate3d(200%, 0, 0) rotate(35deg);
+}
+
+/* slide down */
+
+.dynamic .btn_9 {
+	z-index: 1;
+	position: relative;
+	font-size: 20px;
+	font-family: inherit;
+	color: white;
+	padding: 0.5em 1em;
+	outline: none;
+	border: none;
+	background-color: hsl(236, 32%, 26%);
+}
+
+.dynamic .btn_9::before {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fc2f70;
+	/*	transform-origin: center left;*/
+	transform-origin: center bottom;
+	/*	transform: scaleX(0);*/
+	transform: scaleY(0);
+	transition: transform 0.25s ease-in-out;
+}
+
+.dynamic .btn_9:hover {
+	cursor: pointer;
+}
+
+.dynamic .btn_9:hover::before {
+	/*	transform-origin: center right;*/
+	transform-origin: center top;
+	/*	transform: scaleX(1);*/
+	transform: scaleY(1);
+}
+
+/* outline */
+
+.input_box > div {
+	position: relative;
+	margin: 20px 0;
+}
+
+.outline input {
+	width: 6.5em;
+	color: white;
+	background-color: hsl(236, 32%, 26%);
+	padding: 20px 40px;
+	font-size: 20px;
+	border: 1px solid transparent;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.outline input:focus {
+	outline: none;
+}
+
+.outline input::placeholder {
+	color: hsla(0, 0%, 100%, 0.6);
+}
+
+.outline span {
+	position: absolute;
+	background-color: #3cefff;
+	transition: transform 0.5s ease;
+}
+
+.outline .bottom,
+.outline .top {
+	height: 1px;
+	left: 0;
+	right: 0;
+	transform: scaleX(0);
+}
+
+.outline .left,
+.outline .right {
+	width: 1px;
+	top: 0;
+	bottom: 0;
+	transform: scaleY(0);
+}
+
+.outline .bottom {
+	bottom: 0;
+	transform-origin: bottom right;
+}
+
+.outline input:focus ~ .bottom {
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
+
+.outline .right {
+	right: 0;
+	transform-origin: top right;
+}
+
+.outline input:focus ~ .right {
+	transform-origin: bottom right;
+	transform: scaleY(1);
+}
+
+.outline .top {
+	top: 0;
+	transform-origin: top left;
+}
+
+.outline input:focus ~ .top {
+	transform-origin: top right;
+	transform: scaleX(1);
+}
+
+.outline .left {
+	left: 0;
+	transform-origin: bottom left;
+}
+
+.outline input:focus ~ .left {
+	transform-origin: top left;
+	transform: scaleY(1);
+}
+
+/* trace */
+
+.trace input {
+	width: 6.5em;
+	color: white;
+	background-color: hsl(236, 32%, 26%);
+	padding: 20px 40px;
+	font-size: 20px;
+	border: 1px solid transparent;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.trace input:focus {
+	outline: none;
+}
+
+.trace input::placeholder {
+	color: hsla(0, 0%, 100%, 0.6);
+}
+
+.trace span {
+	position: absolute;
+	background-color: #fc2f70;
+	transition: transform 0.1s ease;
+}
+
+.trace .bottom,
+.trace .top {
+	height: 1px;
+	left: 0;
+	right: 0;
+	transform: scaleX(0);
+}
+
+.trace .left,
+.trace .right {
+	width: 1px;
+	top: 0;
+	bottom: 0;
+	transform: scaleY(0);
+}
+
+.trace .bottom {
+	bottom: 0;
+	transform-origin: bottom right;
+}
+
+.trace input:focus ~ .bottom {
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
+
+.trace .right {
+	right: 0;
+	transform-origin: top right;
+	transition-delay: 0.05s;
+}
+
+.trace input:focus ~ .right {
+	transform-origin: bottom right;
+	transform: scaleY(1);
+}
+
+.trace .top {
+	top: 0;
+	transform-origin: top left;
+	transition-delay: 0.15s;
+}
+
+.trace input:focus ~ .top {
+	transform-origin: top right;
+	transform: scaleX(1);
+}
+
+.trace .left {
+	left: 0;
+	transform-origin: bottom left;
+	transition-delay: 0.25s;
+}
+
+.trace input:focus ~ .left {
+	transform-origin: top left;
+	transform: scaleY(1);
+}
+
+/* underline */
+
+.underline input {
+	width: 6.5em;
+	color: white;
+	background-color: transparent;
+	border: 1px solid transparent;
+	padding: 20px 40px;
+	font-size: 20px;
+	border-bottom-color: hsla(185, 100%, 62%, 0.2);
+}
+
+.underline input:focus {
+	outline: none;
+}
+
+.underline input::placeholder {
+	color: hsla(0, 0%, 100%, 0.6);
+}
+
+.underline span {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: #3cefff;
+	transform-origin: bottom right;
+	transform: scaleX(0);
+	transition: transform 0.5s ease;
+}
+
+.underline input:focus ~ span {
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
