@@ -44,6 +44,13 @@ body {
 	padding-bottom: 1rem;
 }
 
+.carousel-indicators li {
+	width: 50px;
+	height: 10px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
 .btn-primary {
 	background-color: #6648b1;
 	border: 1px solid #6648b1;
@@ -109,6 +116,11 @@ body {
 	padding: 3rem;
 }
 
+.social a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
 .fa-facebook {
 	color: #3b5998;
 }
@@ -162,11 +174,82 @@ hr.light-100 {
 }
 
 /*---Media Queries --*/
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+	.social a {
+		font-size: 4em;
+		padding: 2rem;
+	}
+}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+	.carousel-caption {
+		top: 45%;
+	}
 
-@media (max-width: 576px) {}
+	.carousel-caption h1 {
+		font-size: 350%;
+	}
+
+	.carousel-caption h3 {
+		font-size: 140%;
+		font-weight: 400;
+		padding-bottom: .2rem;
+	}
+	
+	.carousel-caption .btn {
+		font-size: 95%;
+		padding: 8px 14px;
+	}
+	
+	.carousel-indicators li {
+		width: 40px;
+		height: 6px;
+		margin: 0 8px;
+	}
+	
+	.display-4 {
+		font-size: 200%;
+	}
+	
+	.social a {
+		font-size: 2.5em;
+		padding: 1.2rem;
+	}
+	
+}
+
+@media (max-width: 576px) {
+	.carousel-caption {
+		top: 40%;
+	}
+
+	.carousel-caption h1 {
+		font-size: 250%;
+	}
+
+	.carousel-caption h3 {
+		font-size: 110%;
+	}
+	
+	.carousel-caption .btn {
+		font-size: 90%;
+		padding: 4px 8px;
+	}
+	
+	.carousel-indicators {
+		display: none;
+	}
+	
+	.display-4 {
+		font-size: 160%;
+	}
+	
+	.social a {
+		font-size: 2em;
+		padding: .7rem;
+	}
+	
+}
 
 
 /*---Firefox Bug Fix --*/
@@ -196,7 +279,7 @@ figure {
 }
 
 #fixed {
-	background-image: url('img/mac.png');
+	background-image: url('/img/mac.png');
 	position: fixed;
 	display: block;
 	top: 0;
@@ -214,10 +297,6 @@ figure {
 [class*="col-"] {
 	padding: 1rem;
 }
-
-
-
-
 
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
