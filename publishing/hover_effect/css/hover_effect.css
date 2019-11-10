@@ -163,14 +163,14 @@ a.btn:active {
   z-index: -2;
 }
 
-div.cards.showing div.card {
+.cards.showing .card {
   cursor: pointer;
   opacity: 0.6;
   -webkit-transform: scale(0.88);
           transform: scale(0.88);
 }
 
-.no-touch div.cards.showing div.card:hover {
+.no-touch .cards.showing .card:hover {
   opacity: 0.94;
   -webkit-transform: scale(0.92);
           transform: scale(0.92);
