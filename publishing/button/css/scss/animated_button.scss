@@ -1,0 +1,71 @@
+$primary_color: #2d3436;
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    @include center();
+}
+
+.share-button {
+    width: 280px;
+    height: 80px;
+    background-color: #dfe6e9;
+    border-radius: 40px;
+    @include center();
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .3s linear;
+
+    &:hover {
+        transform: scale(1.1);
+
+        span {
+            transform: translateX(-100%);
+            transition-delay: .3s;
+        }
+
+        a {
+            opacity: 1;
+            transform: translateX(0);
+            z-index: 55;
+        }
+    }
+
+    span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $primary_color;
+        color: #f1f1f1;
+        text-align: center;
+        line-height: 80px;
+        z-index: 99;
+        transition: .6s linear;
+        border-radius: 40px;
+    }
+
+    a {
+        flex: 1;
+        font-size: 26px;
+        color: $primary_color;
+        text-align: center;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: .3s linear;
+
+        $total: 4;
+        @for $i from 1 through $total {
+            &:nth-last-of-type(#{$i}) {
+                transition-delay: 1s;
+            }
+        }
+    }
+}
