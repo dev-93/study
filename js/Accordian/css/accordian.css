@@ -10,8 +10,21 @@
   transition: 0.4s;
 }
 
+.accordion::after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
 .active, .accordion:hover {
   background-color: #ccc;
+}
+
+
+.active::after {
+  content: "\2212";
 }
 
 .panel {
