@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+.scene {
+  height: 100vh;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+.scene.one {
+  background-image: url("https://http.cat/304");
+}
+
+.scene.two {
+  background-image: url("https://http.cat/200");
+}
+
+.scene.three {
+  background-image: url("https://http.cat/100");
+}
+
+.scene div {
+  color: white;
+  max-width: 80%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.scene div h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.scene div h1::after {
+  display: block;
+  content: '';
+  border-bottom: 1px solid white;
+  width: 8rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
