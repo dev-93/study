@@ -37,50 +37,17 @@ body {
         height: 130px;
         transition: height 1s;
 
-        &:nth-child(1) {
-            background-color: #05387b;
-        }
-
-        &:nth-child(2) {
-            background-color: #00acee;
-        }
-
-        &:nth-child(3) {
-            background-color: #0077a8;
-        }
-
-        &:nth-child(4) {
-            background-color: #ea4c89;
-        }
-
-        &:nth-child(1) {
-            &:hover {
-                ~.background {
-                    background-color: #05387b;
-                }
+        $colors: (#05387b, #00acee, #0077a8, #ea4c89);
+        @each $color in $colors {
+            $i: index($colors , $color);
+            &:nth-child(#{$i}){
+                background-color: $color;
             }
-        }
-
-        &:nth-child(2) {
-            &:hover {
-                ~.background {
-                    background-color: #00acee;
-                }
-            }
-        }
-
-        &:nth-child(3) {
-            &:hover {
-                ~.background {
-                    background-color: #0077a8;
-                }
-            }
-        }
-
-        &:nth-child(4) {
-            &:hover {
-                ~.background {
-                    background-color: #ea4c89;
+            &:nth-child(#{$i}) {
+                &:hover {
+                    ~.background {
+                        background-color: $color;
+                    }
                 }
             }
         }
