@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const MyName = ({ name }) => {
-	return <div>안녕하세요! 제 이름은 {name} 입니다.</div>;
+class MyName extends Component{
+	render() {
+		return(
+			<div>
+				안녕하세요! 제 이름은 <b>어쩌구</b> 입니다.
+			</div>
+		)
+	}
 }
-
-MyName.defaultProps = {
-	name: "kimtaenam"
-};
 
 export default MyName;
