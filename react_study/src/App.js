@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 import MyName from './MyName';
+import './App.css';
 
 class App extends Component {
   render(){
-    const style = {
-      backgroundColor: 'black',
-      padding: '16px',
-      color: 'red',
-      fontSize: '32px'
-    };
     return (
-      <div style={style}>
+      <div className="App">
         안녕하세요!
       </div>
     )
