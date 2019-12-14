@@ -7,7 +7,7 @@ var s = document.getElementById('s');
 
 var x = setInterval(function(){	
 	var now = new Date();
-    var des = comingdate.getTime() - now.getTime();
+	var des = comingdate.getTime() - now.getTime();
 	var days = Math.floor(des/(1000 * 60 * 60 * 24));
 	var hours = Math.floor(des%(1000 * 60 * 60 * 24) / (1000 * 60 * 60));
 	var mins = Math.floor(des%(1000 * 60 * 60) / (1000 * 60));
