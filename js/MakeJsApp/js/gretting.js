@@ -1,10 +1,10 @@
-const form = document.querySelector(".js-form"), 
+const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
   greeting = document.querySelector(".js-greetings");
 
 const USER_LS = "currentUser",
   SHOWING_ON = "showing";
-
+  
 function saveName(text){
   localStorage.setItem(USER_LS, text);
 }
@@ -14,7 +14,6 @@ function handleSubmit(event){
   const currentValue = input.value;
   paintGreeting(currentValue);
   saveName(currentValue);
-  //input 으로 부터 온 value
 }
 
 function askForName (){
