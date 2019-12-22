@@ -1,7 +1,6 @@
 const weather = document.querySelector(".weather-box"),
   area = document.querySelector(".js-area"),
   nowDegree = weather.querySelector(".now-degree"),
-  rangeDegrees = weather.querySelector(".degrees-range"),
   minDegree = weather.querySelector(".min-degree"),
   maxDegree = weather.querySelector(".max-degree");
 
