@@ -1,6 +1,11 @@
 body {
   background-color: #2c3e50;
   color:white;
+  text-align: center;
+}
+
+li {
+  list-style: none;
 }
 
 .btn {
@@ -16,9 +21,56 @@ body {
   display: none;
 }
 
+.js-clock h1 {
+  font-size: 40px;
+}
+
 .showing{
   display: block;
 }
+
+.js-toDoForm {
+  margin-top: 30px;
+}
+
+.js-toDoForm input {
+  padding:10px 5px;
+}
+
+.js-toDoList {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-height: 200px;
+  overflow-Y: auto;
+}
+
+.js-toDoList li {
+  width:200px;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.js-toDoList li span {
+  float: left;
+}
+
+.js-toDoList li button {
+  float: right;
+}
+
+.weather-box .now-degree{
+  font-size:42px;
+}
+
+.weather-box .degrees-range {
+  position: absolute;
+  bottom:50px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
 
 @keyframes fadeIn{
   from {
