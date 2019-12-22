@@ -4,7 +4,6 @@ const weather = document.querySelector(".weather-box"),
   minDegree = weather.querySelector(".min-degree"),
   maxDegree = weather.querySelector(".max-degree");
 
-
 const API_KEY = "8ffece332fcf3dc518ba4a18c1176e4b";
 const COORDS = "coords";
 
@@ -13,15 +12,15 @@ function getWeather(lat, lon){
   ).then(function(response){
     return response.json();
   }).then(function(json){
-    console.log(json);
     const place = json.name;
     const nowDeg = json.main.temp;
     const minDeg = json.main.temp_min;
     const maxDeg = json.main.temp_max;
-    area.innerText = `${place}`;
-    nowDegree.innerHTML = `현재 : ${nowDeg}도`;
-    minDegree.innerHTML = `최저온도: ${minDeg} / `;
-    maxDegree.innerHTML = `최고온도: ${maxDeg}`;
+    
+    area.innerText = `You are in ${place}`;
+    nowDegree.innerText = `현재 : ${nowDeg}도`;
+    minDegree.innerText = `최저온도: ${minDeg} / `;
+    maxDegree.innerText = `최고온도: ${maxDeg}`;
   });
 }
 

@@ -50,10 +50,13 @@ li {
   margin:0 auto;
   display: flex;
   justify-content: space-between;
+  margin-bottom:5px;
 }
 
 .js-toDoList li span {
   float: left;
+  text-align: left;
+  width:70%;
 }
 
 .js-toDoList li button {
