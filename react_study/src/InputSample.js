@@ -1,32 +1,44 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-const InputSample = () => {
-    const [text, setText] = useState('');
+function InputSample() {
+    
+    const [inputs, setInputs] = useState({
+        name:'',
+        nickname:'',
+    });
+
+    const { name, nickname } = inputs;
+    // 비구조화 할당을 통해 값 추출
 
     const onChange = (e) => {
-        // 이벤트 객체 e를 파라미터로 받아와서 사용
-        setText(e.target.value);
-        // e.target은 이벤트가 발생한 DOM인 input DOM을 가르킴
-        // 이 DOM의 value값
-        // e.target.value를 조회하면 현재 input에 입력한 값이 무엇인지 알 수 있음.
-        console.log(e.target.value);
-    };
+        const { value, name } = e.target;
+        // 우선 e.target 에서 name과 value를 추출
+
+        setInputs({
+            ...inputs, // 기존의 객체를 복사한 뒤
+            [name]: value // name 키를 가진 값을 value로 설정
+        });
+    };;
 
     const onReset = () => {
-         setText("");
+        setInputs({
+            name: '',
+            nickname: '',
+        })
     };
 
+
     return (
-        <>
-            <input onChange={onChange} value={text}/>
-            {/* input의 상태를 관리할 때, input 태그의 value값도 설정해주어야함 */}
-            {/* 그렇게 해야, 상태가 바뀌었을때, input의 내용도 업데이트가 된다 */}
+        <div>
+            <input name="name" placeholder="이름" onChange={onChange} value={name}/>
+            <input name="nickname" placeholder="닉네임" onChange={onChange} value={nickname}/>
             <button onClick={onReset}>초기화</button>
             <div>
-                <b>값: {text} </b>
+            <b>값: </b>
+            {name} ({nickname})
             </div>
-        </>
-    )
+        </div>
+    );
 }
 
 export default InputSample;
