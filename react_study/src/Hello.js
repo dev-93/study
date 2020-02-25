@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Hello = (props) => {
+const Hello = ({color, name}) => {
     return (
     <>
-        <div>Hello {props.name} </div>
-        <div style={{ color:props.color}}>App컴포넌트에서 전달받은 props의 color는 {props.color}입니다 </div>
+        <div>Hello {name} </div>
+        <div style={{color}}>App컴포넌트에서 전달받은 props의 color는 {color}입니다 </div>
     </>
     )  
 }
