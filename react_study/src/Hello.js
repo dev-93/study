@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Hello = ({color, name}) => {
+const Hello = ({color, name, isSpecial}) => {
     return (
     <>
-        <div>Hello {name} </div>
-        <div style={{color}}>App컴포넌트에서 전달받은 props의 color는 {color}입니다 </div>
+        <div style={{color}}>
+            { isSpecial ? <b>*</b> : null }
+            안녕하세요 {name}
+        </div>
     </>
     )  
 }

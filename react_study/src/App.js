@@ -6,8 +6,8 @@ const App = () => {
   return (
     <>
       <Wrapper>
-        <Hello name="react" color="blue"/>
-        <Hello color="red"/>
+        <Hello name="react" color="skyblue" isSpecial={true} />
+        <Hello color="brown"/>
       </Wrapper>
     </>
   );
