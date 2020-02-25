@@ -9,4 +9,8 @@ const Hello = ({color, name}) => {
     )  
 }
 
+Hello.defaultProps = {
+    name: '이름이 없습니다.'
+}
+
 export default Hello;
