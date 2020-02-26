@@ -10,7 +10,7 @@ function CreateUser({ username, email, onChange, onCreate}) {
                 value={username}    
             />
             <input 
-                name="eamil"
+                name="email"
                 placeholder="이메일"
                 onChange={onChange}
                 value={email}    
