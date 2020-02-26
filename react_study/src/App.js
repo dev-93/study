@@ -1,5 +1,7 @@
 import React, {useRef} from 'react';
 import UserList from "./UserList";
+import CreateUser from "./CreateUser";
+
 
 
 
@@ -23,12 +25,13 @@ const App = () => {
   const nextId = useRef(4);
   const onCreate = () => {
     // 나중에 구현 할 배열에 항목 추가하는 로직
-    
+
     nextId.current += 1;
   }
 
   return (
     <>
+      <CreateUser />
       <UserList users={users}/>
     </>
   );
