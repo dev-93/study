@@ -5,28 +5,52 @@
 	<title>Tabs</title>
 	<link rel="stylesheet" href="./css/tabs.css">
 </head>
+
 <body>
-	<div class="tab">
-		<button class="tablinks" onclick="openCity(event, 'London')">London</button>
-		<button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-		<button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+	<div class="wrap">
+		<div class="tab">
+			<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." />
+			<li><button class="tablinks" onclick="openCity(event, 'London')">London</button></li>
+			<li><button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button></li>
+			<li><button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button></li>
+			<li><button class="tablinks" onclick="openCity(event, 'Seoul')">Seoul</button></li>
+			<li><button class="tablinks" onclick="openCity(event, 'Beijing')">Beijing</button></li>
+			<li><button class="tablinks" onclick="openCity(event, 'Hanoi')">Hanoi</button></li>
+		</div>
+
+		<div class="tab_contents">
+			<div id="London" class="tabcontent">
+				<h3>London</h3>
+				<p>London is the capital city of England</p>
+			</div>
+
+			<div id="Paris" class="tabcontent">
+				<h3>Paris</h3>
+				<p>Paris is the capital city of France</p>
+			</div>
+
+			<div id="Tokyo" class="tabcontent">
+				<h3>Tokyo</h3>
+				<p>Tokyo is the capital city of Japan</p>
+			</div>
+
+			<div id="Seoul" class="tabcontent">
+				<h3>Seoul</h3>
+				<p>Seoul is the capital city of Korea</p>
+			</div>
+			
+			<div id="Beijing" class="tabcontent">
+				<h3>Beijing</h3>
+				<p>Tokyo is the capital city of China</p>
+			</div>
+
+			<div id="Hanoi" class="tabcontent">
+				<h3>Hanoi</h3>
+				<p>Hanoi is the capital city of Vietnam</p>
+			</div>
+		</div>
 	</div>
-	
-	<div id="London" class="tabcontent">
-		<h3>London</h3>
-		<p>London is the capital city of England</p>
-	</div>
-	
-	<div id="Paris" class="tabcontent">
-		<h3>Paris</h3>
-		<p>Paris is the capital city of France</p>
-	</div>
-	
-	<div id="Tokyo" class="tabcontent">
-		<h3>Tokyo</h3>
-		<p>Tokyo is the capital city of Japan</p>
-	</div>
-	
+
+
 	<script src="js/tabs.js"></script>
-</body>
-</html>
+</body></html>
