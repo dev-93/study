@@ -43,6 +43,10 @@ li {
 	width: 80%;
 }
 
+.tab_contents .tabcontent:nth-of-type(1) {
+	display:block;
+} 
+
 .tab_contents > .tabcontent {
 	width: 100%;
 	display: none;
@@ -61,6 +65,3 @@ li {
 	background-color: #ccc;
 }
 
-#London {
-	display:block;
-} 
