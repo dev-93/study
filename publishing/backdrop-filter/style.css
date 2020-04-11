@@ -1,0 +1,43 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+.wrap {
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+.wrap img {
+  width:100vw;
+}
+
+.wrap .text_box {
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  border: 3px dotted white;
+  width: 50%;
+  height:40%;
+  display: table;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(2px); */
+  /* backdrop-filter: brightness(30%); */
+  /* backdrop-filter: contrast(70%); */
+  /* backdrop-filter: drop-shadow(4px 4px 10px blue); */
+  /* backdrop-filter: grayscale(30%); */
+  /* backdrop-filter: hue-rotate(120deg); */
+  /* backdrop-filter: invert(70%); */
+  /* backdrop-filter: opacity(60%); */
+  /* backdrop-filter: sepia(90%); */
+  /* backdrop-filter: saturate(80%); */
+  /* Browser compatibility not support in internet explorer */
+}
+
+.wrap .text_box h1 {
+  display: table-cell;
+  vertical-align: middle;
+  color:white;
+}
